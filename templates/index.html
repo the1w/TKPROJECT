@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+    <h1>Welcome to NFC Tag Manager</h1>
+    <p class="welcome-text">Manage your NFC tags and their redirect URLs with ease and security.</p>
+
+    <div class="action-buttons">
+        {% if current_user.is_authenticated %}
+            <a href="{{ url_for('dashboard') }}" class="btn">Go to your dashboard</a>
+        {% else %}
+            <a href="{{ url_for('login') }}" class="btn">Login</a>
+            <a href="{{ url_for('register') }}" class="btn btn-secondary">Register</a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

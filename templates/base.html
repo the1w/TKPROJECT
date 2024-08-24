@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{{ get_locale() }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}NFC Tag Manager{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">{{ _('Home') }}</a></li>
+                {% if current_user.is_authenticated %}
+                    <li><a href="{{ url_for('dashboard') }}">{{ _('Dashboard') }}</a></li>
+                    <li><a href="{{ url_for('logout') }}">{{ _('Logout') }}</a></li>
+                {% else %}
+                    <li><a href="{{ url_for('login') }}">{{ _('Login') }}</a></li>
+                    <li><a href="{{ url_for('register') }}">{{ _('Register') }}</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+        <div class="language-selector">
+            <a href="{{ url_for('set_language', lang='en') }}">EN</a> |
+            <a href="{{ url_for('set_language', lang='lt') }}">LT</a>
+        </div>
+    </header>
+    <main>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="flashes">
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </main>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

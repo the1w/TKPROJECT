@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ _('Dashboard') }}</h1>
+
+<div class="card">
+    <h2>{{ _('Your NFC Tags') }}</h2>
+    {% if tags %}
+        <ul class="tag-list">
+            {% for tag in tags %}
+                <li class="tag-item">
+                    <span class="tag-id">{{ tag.tag_id }}</span>
+                    <span class="tag-url">{{ tag.redirect_url }}</span>
+                    <img src="{{ url_for('qr_code', tag_id=tag.tag_id) }}" alt="QR Code" class="qr-code">
+                    <form method="POST" action="{{ url_for('edit_tag', id=tag.id) }}" class="inline-form">
+                        <input type="url" name="redirect_url" value="{{ tag.redirect_url }}" required>
+                        <button type="submit" class="btn btn-small">{{ _('Update') }}</button>
+                    </form>
+                    <form method="POST" action="{{ url_for('delete_tag', id=tag.id) }}" class="inline-form">
+                        <button type="submit" class="btn btn-small btn-danger">{{ _('Delete') }}</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>{{ _('You don\'t have any NFC tags yet.') }}</p>
+    {% endif %}
+</div>
+
+<div class="card">
+    <h2>{{ _('Add New NFC Tag') }}</h2>
+    <form method="POST" action="{{ url_for('add_tag') }}">
+        <div>
+            <label for="tag_id">{{ _('Tag ID') }}</label>
+            <input type="text" id="tag_id" name="tag_id" required>
+        </div>
+        <div>
+            <label for="redirect_url">{{ _('Redirect URL') }}</label>
+            <input type="url" id="redirect_url" name="redirect_url" required>
+        </div>
+        <div>
+            <button type="submit" class="btn">{{ _('Add Tag') }}</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

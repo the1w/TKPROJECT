@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+msgid "Home"
+msgstr "Pagrindinis"
+
+msgid "Dashboard"
+msgstr "Valdymo skydelis"
+
+msgid "Login"
+msgstr "Prisijungti"
+
+msgid "Logout"
+msgstr "Atsijungti"
+
+msgid "Register"
+msgstr "Registruotis"
+
+msgid "Your NFC Tags"
+msgstr "Jūsų NFC žymos"
+
+msgid "You don't have any NFC tags yet."
+msgstr "Jūs dar neturite NFC žymų."
+
+msgid "Add New NFC Tag"
+msgstr "Pridėti naują NFC žymą"
+
+msgid "Tag ID"
+msgstr "Žymos ID"
+
+msgid "Redirect URL"
+msgstr "Nukreipimo URL"
+
+msgid "Add Tag"
+msgstr "Pridėti žymą"
+
+msgid "Update"
+msgstr "Atnaujinti"
+
+msgid "Delete"
+msgstr "Ištrinti"
+
+msgid "Reset Password"
+msgstr "Atstatyti slaptažodį"
+
+msgid "Email"
+msgstr "El. paštas"
+
+msgid "Request Password Reset"
+msgstr "Prašyti slaptažodžio atstatymo"
+
+msgid "New Password"
+msgstr "Naujas slaptažodis"
+
+msgid "Confirm New Password"
+msgstr "Patvirtinti naują slaptažodį"
+
+msgid "Registration successful. Please log in."
+msgstr "Registracija sėkminga. Prašome prisijungti."
+
+msgid "Invalid username or password"
+msgstr "Neteisingas vartotojo vardas arba slaptažodis"
+
+msgid "NFC Tag added successfully"
+msgstr "NFC žyma sėkmingai pridėta"
+
+msgid "NFC Tag updated successfully"
+msgstr "NFC žyma sėkmingai atnaujinta"
+
+msgid "NFC Tag deleted successfully"
+msgstr "NFC žyma sėkmingai ištrinta"
+
+msgid "An email has been sent with instructions to reset your password."
+msgstr "Laiškas su instrukcijomis, kaip atstatyti slaptažodį, išsiųstas."
+
+msgid "That is an invalid or expired token"
+msgstr "Tai yra neteisingas arba pasibaigęs žetonas"
+
+msgid "Your password has been updated! You are now able to log in"
+msgstr "Jūsų slaptažodis atnaujintas! Dabar galite prisijungti"

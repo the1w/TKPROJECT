@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ _('Reset Password') }}</h1>
+<form method="POST" action="">
+    <div>
+        <label for="password">{{ _('New Password') }}</label>
+        <input type="password" id="password" name="password" required>
+    </div>
+    <div>
+        <label for="confirm_password">{{ _('Confirm New Password') }}</label>
+        <input type="password" id="confirm_password" name="confirm_password" required>
+    </div>
+    <div>
+        <button type="submit" class="btn">{{ _('Reset Password') }}</button>
+    </div>
+</form>
+{% endblock %}
